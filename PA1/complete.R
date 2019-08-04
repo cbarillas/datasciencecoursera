@@ -4,8 +4,8 @@ complete <- function(directory, id = 1:332){
         for (i in id){
                 csvData <- read.csv(csvList[i])
                 completeCases <- complete.cases(csvData)
-                sum <- sum(completeCases)
-                completeCount <-c(completeCount, sum)
+                nobs <- sum(completeCases)
+                completeCount <-c(completeCount, nobs)
         }
         completeDataFrame <- data.frame(id, completeCount)
         colnames(completeDataFrame) <- c("id", "nobs")
