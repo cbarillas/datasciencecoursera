@@ -32,7 +32,7 @@ best <- function(state, outcome) {
                 min_value <- min(sub_outcome[,23], na.rm=T)
                 min_row <- subset(sub_outcome, sub_outcome[,23] == min_value)
         }
-        print(min_row$Hospital.Name)
-        print(class(min_row$Hospital.Name))
+        sorted_hospital_names <- sort(min_row$Hospital.Name)
+        print(sorted_hospital_names[1])
 
 }
